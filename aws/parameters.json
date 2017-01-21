@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "ImageID",
-    "ParameterValue": "ami-b05203d0"
+    "ParameterValue": "ami-539ac933"
   },
   {
     "ParameterKey": "InstanceType",
@@ -17,10 +17,14 @@
   },
   {
     "ParameterKey": "MaxNum",
-    "ParameterValue": "1"
+    "ParameterValue": "2"
   },
   {
     "ParameterKey": "MinNum",
+    "ParameterValue": "1"
+  },
+  {
+    "ParameterKey": "DesiredNum",
     "ParameterValue": "1"
   },
   {
@@ -45,7 +49,7 @@
   },
   {
     "ParameterKey": "Deb",
-    "ParameterValue": "mykeystore-1.0.1.deb"
+    "ParameterValue": "mykeystore-1.0.2.deb"
   },
   {
     "ParameterKey": "IsPublic",

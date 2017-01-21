@@ -8,7 +8,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DEB_LOC=$DIR/mykeystore
 BIN_LOC=$DEB_LOC/usr/local/bin
 CONFIG_LOC=$DEB_LOC/usr/local/etc/mykeystore
-VERSION=1.0.1
+VERSION=1.0.2
 DEB_NAME=packages/mykeystore-"$VERSION".deb
 
 rm -rf $DEB_LOC 2>1
@@ -23,9 +23,9 @@ cp -a $DIR/DEBIAN $DIR/etc $DEB_LOC
 
 cd $DIR
 
-cp ../../bin/keystore $BIN_LOC
-cp ../../config.production.json $CONFIG_LOC/config.json
-cp -a ../../assets $CONFIG_LOC/
+cp $GOPATH/src/keystore/bin/keystore $BIN_LOC
+cp $GOPATH/src/keystore/config.production.json $CONFIG_LOC/config.json
+cp -a $GOPATH/src/keystore/assets $CONFIG_LOC/
 
 #get rid of any swap files that may have been copied over
 find $DEB_LOC -type f -name *.sw* -exec rm {} \;

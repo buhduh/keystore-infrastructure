@@ -56,6 +56,10 @@
     "InstanceProfileRole": {
       "Type": "String",
       "Description": "The instance profile role."
+    },
+    "DesiredNum": {
+      "Type": "String",
+      "Description": "The desired number of ec2 instances."
     }
   },
   "Resources" : {
@@ -65,6 +69,7 @@
         "LaunchConfigurationName": { "Ref": "LaunchConfig" },
         "MaxSize": { "Ref": "MaxNum" },
         "MinSize": { "Ref": "MinNum" },
+        "DesiredCapacity": { "Ref": "DesiredNum" },
         "Tags": [
           {
             "Key": "Name",
@@ -74,6 +79,11 @@
         ],
         "VPCZoneIdentifier": { "Ref": "Subnets" },
         "LoadBalancerNames": { "Ref": "ELBNames" }
+      },
+      "UpdatePolicy": {
+        "AutoScalingReplacingUpdate": {
+          "WillReplace": true
+        } 
       }
     },
     "LaunchConfig": {

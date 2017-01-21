@@ -5,7 +5,7 @@ endif
 certs = etc/ssl/certs/dhparam.pem etc/ssl/certs/mykeystore.net.pem 
 certs += etc/ssl/private/mykeystore.net.pem
 
-bin = ../../bin/keystore
+bin = $(GOPATH)/src/keystore/bin/keystore
 
 package: $(certs) $(bin)
 	@sed -ri 's/(VERSION=)[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]/\1$(VERSION)/' createDebian.sh

@@ -1,5 +1,5 @@
 Package: mykeystore
-Version: 1.0.1
+Version: 1.0.2
 Architecture: amd64
 Maintainer: Dale Owens <physicali2001@yahoo.com>
 Depends: nginx-full
