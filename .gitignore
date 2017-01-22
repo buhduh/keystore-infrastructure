@@ -1,8 +1,5 @@
 *.bak
 *.sw[a-z]
-#don't commit configuration files
-#run generateConfig.py and name
-#appropriately
 !debian
 debian/mykeystore
 debian/packages
